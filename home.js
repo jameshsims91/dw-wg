@@ -17,6 +17,7 @@ const main_video = document.querySelector('.main-video video');
 const main_video_title = document.querySelector('.main-video .title');
 const video_playlist = document.querySelector('.video-playlist .videos');
 
+
 let data = [
     {
         'id': 'a1',
@@ -34,10 +35,10 @@ let data = [
 
 data.forEach((video, i) => {
     let video_element = `
-        <div class="video" data-id="${video.id}">
-            <img src="" alt="">
-            <p>${i + 1 > 9 ? i + 1 : '0' + (i + 1)}. </p>
-            <h3 ckass="title">${video.title}</h3>
+       <div class="video" data-id="${video.id}">
+            <img src="buttons/play_button.jpg" alt="">
+            <p>${i + 1 > 9 ? i + 1 : '0' + (i +1)}. </p>
+            <h3 class="title">${video.title}</h3>
             <p class="time">${video.duration}</p>
         </div>
     `;
@@ -46,22 +47,22 @@ data.forEach((video, i) => {
 
 let videos = document.querySelectorAll('.video');
 videos[0].classList.add('active');
-videos[0].querySelector('img').src = 'images/pause.svg';
+videos[0].querySelector('img').src = 'buttons/pause.jpg';
 
 videos.forEach(selected_video => {
     selected_video.onclick = () => {
 
         for (all_videos of videos) {
             all_videos.classList.remove('active');
-            all_videos.querySelector('img').src = 'images/PluginArray.svg';
+            all_videos.querySelector('img').src = 'buttons/play_button.jpg';
 
         }
 
-    selected_video.classList.add('active');
-    selected_video.querySelector('img').src = 'images/pause.svg';
+        selected_video.classList.add('active');
+        selected_video.querySelector('img').src = 'buttons/pause.jpg';
 
-    let match_video = data.find(video => video.id == selected_video.CDATA_SECTION_NODE.id);
-    main_video.src = 'videos/' + match_video.name;
-    main_video_title.innerHTML = match_video.title;
+        let match_video = data.find(video => video.id == selected_video.dataset.id);
+        main_video.src = 'videos/' + match_video.name;
+        main_video_title.innerHTML = match_video.title;
     }
 });
