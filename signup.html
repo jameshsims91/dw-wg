@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DW's Wacky Gauntlet</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" media="screen" href="signup.css">
+    </head>
+
+    <body>
+        <div class="menu-bar">
+            <img class="logo" src="dw_bull.jpg" alt="DWs Bull Logo"
+            width="60"
+            height="60">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pictures <i class="fas fa-caret-down"></i></a>
+
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Upcoming Shows<i class="fas fa-caret-down"></i></a>
+
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">Fan Mail</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Donations</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <form class="signup" action="https://formsubmit.co/dynamictesticals@gmail.com" method="POST">
+            <fieldset>
+                <legend>Sign Up</legend>
+
+                <div class="nameInput">
+                    <input type="text" id="firstName" name="first_name" placeholder="First Name" required>
+
+                    <input type="text" id="lastName" name="last_name" placeholder="Last Name" required>
+                </div>
+
+                <div class="emailNumberInput">
+                    <input type="email" id="email" name="email_address" placeholder="Email Address" required>
+
+                    <input type="text" id="number" name="phone_number" placeholder="Phone Number" required>
+                </div>
+
+                <div class="commentsTextArea">
+                    <textarea id="comments" name="comments" placeholder="Comments" style="height: 200px; width: 400px;" required></textarea>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="textMessages" name="textMessages" />
+                    <label for="textMessages">Agree to receive at most 3 messages a week!</label>
+                </div>
+
+                <div>
+                    <button type="submit" value="Subscribe!">Submit</button>
+                </div>
+
+                <input type="hidden" name="_next" value="Thank you for joining the Newsletter">
+
+                <input type="hidden" name="_subject" value="New Submission!">
+
+                <input type="hidden" name="_cc" value="">
+
+                <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="text" name="_honey" style="display:none">
+
+                <input type="hidden" name="_autorespone" value="Thank you for joining the Newsletter, you will receive updates about upcoming shows">
+
+                <input type="hidden" name="_template" value="table">
+
+                <form action="https://formsubmit.co/your-random-string" method="POST" />
+            </fieldset>
+        </form>
+    </body>
+</html>

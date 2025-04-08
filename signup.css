@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', monospace;
+    background-color: #7c5ab6;
+    min-height: 100vh;
+    background-image: url(dw_palm2.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--playlist);
+}
+
+.menu-bar {
+    background-color: #6167c7;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: relative;
+    top: 30px;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+
+    position: relative;
+}
+
+.menu-bar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    color: #0aa2e1;
+}
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #4679ce;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+.menu-bar ul li .dropdown-menu a:hover {
+    color: #ed5db5;
+}
+
+.signup {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: c;
+    text-align: center;
+    margin: 0 auto;
+    top: 280px;
+}
+
+fieldset {
+    border: 0.5px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 100%;
+    justify-content: space-between;
+    background-color: #ef1293;
+}
+
+fieldset input, textarea {
+    background-color: #4679ce;
+}
+
+input::placeholder, textarea::placeholder {
+    color: black;
+    font-size: larger;
+}
+
+fieldset input {
+    height: 30px;
+}
+
+fieldset legend {
+    border: 0.5px solid black;
+    padding: 0.5px;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    background-color: #7c5ab6;
+}
+
+.nameInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+    margin-bottom: 30px;
+}
+
+.emailNumberInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+}
+
+.commentsTextArea {
+    width: 100%;
+    margin-top: 30px;
+}
+
+fieldset .checkbox {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 5px;
+    inline-size: 400px;
+    background-color: #7c5ab6;
+}
+
+fieldset .checkbox label {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: pink;
+}
+
+fieldset button {
+    background-color: #7c5ab6;
+    border: none;
+    border-radius: 5px;;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+fieldset button:hover {
+   color: #ef1293;
+   opacity: 0.8;
+}
