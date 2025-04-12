@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+      if (link.href.endsWith(currentPage)) {
+        link.classList.add('active');
+      }
+    });
+  });
+
 let slideIndex = 0;
 const slides = document.getElementsByClassName("wgSlides");
 
